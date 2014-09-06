@@ -23,8 +23,8 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
   
 
   // default latitude and longitude values. set to Salem which is kinda at the center of Tamil Nadu
-  $scope.lat = 42.51954;
-  $scope.lon = -70.8967155;
+  $scope.lat = 10.9580; 
+  $scope.lon = 78.0800;
 
   $scope.map = {
     center: {        
@@ -32,7 +32,7 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
         longitude: $scope.lon
     },
     options: { draggable: true },
-    zoom: 6,
+    zoom: 8,
     events : {}
  };
 
