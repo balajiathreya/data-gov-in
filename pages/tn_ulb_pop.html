@@ -1,0 +1,40 @@
+
+
+    <style type='text/css'>
+        .angular-google-map-container { height: 900px; }
+    </style>
+
+    <a href='#'>Back to Home</a>
+
+    <h3>Area-wise Population within corporations and municipalities in Tamil Nadu (<a href='http://data.gov.in/catalog/area-wise-population-within-corporations-and-municipalities-tamil-nadu' target=
+'_blank'>Source</a>)</h3>
+    <div class="row">
+        <div class='col-md-9'>
+            <google-map center="map.center"
+            zoom="map.zoom"
+            draggable="true"
+            dragging="map.dragging"
+            bounds="map.bounds"
+            events="map.events"
+            options="map.options"
+            pan="true"
+            control="map.control"></google-map>
+        </div>
+        <div class='col-md-3'>
+            <span>		  
+                  <h4>{{message}}</h4>
+
+<!--                  <span ng-switch on="trending[0]">
+                        <span ng-switch-when="N">{{trending}}</span>
+                        <span ng-switch-default>
+                              <span ng-repeat = "topic in trending[0].trends">
+                                    <a ng-href='{{topic.url}}'>{{topic.name}}</a><br/>
+                              </span>
+                        </span>
+                  </span>
+-->
+            </span>  
+        </div>
+    </div>
+
+
