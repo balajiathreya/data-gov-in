@@ -25,7 +25,8 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
   // default latitude and longitude values. set to Salem which is kinda at the center of Tamil Nadu
   $scope.lat = 10.9580; 
   $scope.lon = 78.0800;
-
+  $scope.errorMessage = '';
+  
   $scope.map = {
     center: {        
         latitude: $scope.lat,
@@ -36,4 +37,19 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
     events : {}
  };
 
+
+ var getPopData = function(){
+    url = "/resources/TN_ULB_POP.json";
+    var responsePromise = $http.get(url);
+
+    responsePromise.success(function(data, status, headers, config) {      
+      $scope.popData = data;
+    });
+
+    responsePromise.error(function(data, status, headers, config) {
+      $scope.errorMessage = data;
+    });  
+  };
+
+ getPopData();
 }]);

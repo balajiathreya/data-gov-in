@@ -4,6 +4,7 @@
         .angular-google-map-container { height: 900px; }
     </style>
 
+
     <a href='#'>Back to Home</a>
 
     <h3>Area-wise Population within corporations and municipalities in Tamil Nadu (<a href='http://data.gov.in/catalog/area-wise-population-within-corporations-and-municipalities-tamil-nadu' target=
@@ -21,19 +22,11 @@
             control="map.control"></google-map>
         </div>
         <div class='col-md-3'>
-            <span>		  
-                  <h4>{{message}}</h4>
-
-<!--                  <span ng-switch on="trending[0]">
-                        <span ng-switch-when="N">{{trending}}</span>
-                        <span ng-switch-default>
-                              <span ng-repeat = "topic in trending[0].trends">
-                                    <a ng-href='{{topic.url}}'>{{topic.name}}</a><br/>
-                              </span>
-                        </span>
-                  </span>
--->
-            </span>  
+            <div>		  
+		<span ng-repeat = "location in popData.data">
+			<span>{{location['ULB_NAME']}} | {{location['LAT']}} {{location['LNG']}}</span>
+		</span>
+            </div>  
         </div>
     </div>
 
