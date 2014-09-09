@@ -25,8 +25,9 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
   // default latitude and longitude values. set to Salem which is kinda at the center of Tamil Nadu
   $scope.lat = 10.9580; 
   $scope.lon = 78.0800;
-  $scope.errorMessage = '';
-  
+  $scope.errorMessage = 'blah blah';
+  $scope.pop_info = {};
+  $scope.selid = 0;
   $scope.map = {
     center: {        
         latitude: $scope.lat,
@@ -39,20 +40,25 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
 
 
  $scope.markerModels = [];
- $scope.options = {scrollwheel: false};
- $scope.markersEvents = {
- 	click: function (gMarker, eventName, model) {
-		console.log(eventName + ":" + model);
-          }
-        };
+ $scope.options = {};
 
   // Get the bounds from the map once it's loaded
-  $scope.$watch(function() { return $scope.map.bounds; }, function() {
-        var markers = [];
-	getPopData();
-    }, true);
+  $scope.$watch(function() { return $scope.map.bounds; }, function() {	getPopData();   }, true);
 
- var createMarker = function (i, location, bounds, idKey) {
+   $scope.options = {scrollwheel: false};
+   $scope.markerEvents = {
+      click: function (gMarker, eventName, model) {
+          if(model.$id){
+             model = model.coords;//use scope portion then
+            }
+	  $scope.pop_info = $scope.popData[model.id];
+	  console.log($scope.pop_info);
+       }
+   };
+
+
+
+ var createMarker = function (i, location, bounds) {
 	var latitude = location['LAT'];
 	var longitude = location['LNG'];
 	var ret = {
@@ -65,7 +71,8 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
 		longitude: longitude,
 		title: location['ULB_NAME']
 	};
-	ret["idKey"] = i;
+
+	ret["id"] = i;
 	return ret;
  };
 
@@ -78,7 +85,7 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
 	$scope.popData = data['data'];
 	markers = [];
         for (var i = 0; i < $scope.popData.length; i++){
-                markers.push(createMarker(i, $scope.popData[i], $scope.map.bounds, i))
+                markers.push(createMarker(i, $scope.popData[i], $scope.map.bounds))
         }
         $scope.markerModels = markers;
     });

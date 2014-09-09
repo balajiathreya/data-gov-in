@@ -9,6 +9,7 @@
 
     <h3>Area-wise Population within corporations and municipalities in Tamil Nadu (<a href='http://data.gov.in/catalog/area-wise-population-within-corporations-and-municipalities-tamil-nadu' target=
 '_blank'>Source</a>)</h3>
+    <h4>Click on the marker to view population information</h4>
     <div class="row">
         <div class='col-md-9'>
         	<google-map center="map.center"
@@ -20,16 +21,24 @@
             options="map.options"
             pan="true"
             control="map.control">
-			  <markers models="'markerModels'" coords="'self'" options="'{}'" events="'{}'" isLabel='true'>
-		
-		google-map>
+			  <markers models="markerModels" coords="'self'" click="'onClicked'" options="'options'" events="markerEvents" isLabel='true'></markers>
+		</google-map>
         </div>
+
         <div class='col-md-3'>
-            <div>		  
-		<span ng-repeat = "location in popData">
-			<span>{{location['ULB_NAME']}} | {{location['LAT']}} {{location['LNG']}}</span>
-		</span>
-            </div>  
+
+		<span ng-model="pop_info.ULB_NAME">Location name : </span>
+		<div>Type of location : {{pop_info['TYPE']}}</div>
+		<div>Population (based on house listing) : {{pop_info['POP_PROVISIONAL']}}</div>
+		<div>Population (based on 2001) : {{pop_info['POP_2001_CENSUS']}}</div>
+		<div>Area in sq km : {{pop_info['AREA_SQ_KM']}}</div>
+
+		<div ng-repeat='(k,v) in pop_info'>
+			<div><span>{{k}}</span> :: <span>{{v}}</span></div>
+		</div>
+
+
+
         </div>
     </div>
 
