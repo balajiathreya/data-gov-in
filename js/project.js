@@ -38,12 +38,49 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
  };
 
 
+ $scope.markerModels = [];
+ $scope.options = {scrollwheel: false};
+ $scope.markersEvents = {
+ 	click: function (gMarker, eventName, model) {
+		console.log(eventName + ":" + model);
+          }
+        };
+
+  // Get the bounds from the map once it's loaded
+  $scope.$watch(function() { return $scope.map.bounds; }, function() {
+        var markers = [];
+	getPopData();
+    }, true);
+
+ var createMarker = function (i, location, bounds, idKey) {
+	var latitude = location['LAT'];
+	var longitude = location['LNG'];
+	var ret = {
+		options: {draggable: true,
+			labelAnchor: '10 39',
+			labelContent: i,
+			labelClass: 'labelMarker'
+			},
+		latitude: latitude,
+		longitude: longitude,
+		title: location['ULB_NAME']
+	};
+	ret["idKey"] = i;
+	return ret;
+ };
+
+
  var getPopData = function(){
     url = "/resources/TN_ULB_POP.json";
     var responsePromise = $http.get(url);
 
     responsePromise.success(function(data, status, headers, config) {      
-      $scope.popData = data;
+	$scope.popData = data['data'];
+	markers = [];
+        for (var i = 0; i < $scope.popData.length; i++){
+                markers.push(createMarker(i, $scope.popData[i], $scope.map.bounds, i))
+        }
+        $scope.markerModels = markers;
     });
 
     responsePromise.error(function(data, status, headers, config) {
@@ -51,5 +88,9 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
     });  
   };
 
- getPopData();
+
+
+
+
+
 }]);
