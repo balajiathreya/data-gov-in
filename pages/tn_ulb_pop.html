@@ -2,6 +2,7 @@
 
     <style type='text/css'>
         .angular-google-map-container { height: 900px; }
+	.labelMarker {height:140px;}
     </style>
 
 
@@ -9,7 +10,6 @@
 
     <h3>Area-wise Population within corporations and municipalities in Tamil Nadu (<a href='http://data.gov.in/catalog/area-wise-population-within-corporations-and-municipalities-tamil-nadu' target=
 '_blank'>Source</a>)</h3>
-    <h4>Click on the marker to view population information</h4>
     <div class="row">
         <div class='col-md-9'>
         	<google-map center="map.center"
@@ -26,18 +26,12 @@
         </div>
 
         <div class='col-md-3'>
-
-		<span ng-model="pop_info.ULB_NAME">Location name : </span>
+		<h4>Click on the marker to view population information</h4>
+		<div >Location name : {{pop_info['ULB_NAME']}}</div>
 		<div>Type of location : {{pop_info['TYPE']}}</div>
 		<div>Population (based on house listing) : {{pop_info['POP_PROVISIONAL']}}</div>
 		<div>Population (based on 2001) : {{pop_info['POP_2001_CENSUS']}}</div>
 		<div>Area in sq km : {{pop_info['AREA_SQ_KM']}}</div>
-
-		<div ng-repeat='(k,v) in pop_info'>
-			<div><span>{{k}}</span> :: <span>{{v}}</span></div>
-		</div>
-
-
 
         </div>
     </div>

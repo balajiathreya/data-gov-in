@@ -26,7 +26,7 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
   $scope.lat = 10.9580; 
   $scope.lon = 78.0800;
   $scope.errorMessage = 'blah blah';
-  $scope.pop_info = {};
+  $scope.pop_info = '';
   $scope.selid = 0;
   $scope.map = {
     center: {        
@@ -51,12 +51,16 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
           if(model.$id){
              model = model.coords;//use scope portion then
             }
-	  $scope.pop_info = $scope.popData[model.id];
-	  console.log($scope.pop_info);
+	  updatePopInfo(model.id);
        }
    };
 
 
+  var updatePopInfo = function(id){
+	 $scope.pop_info = $scope.popData[id];
+         console.log($scope.pop_info);
+	$scope.$apply();
+  };
 
  var createMarker = function (i, location, bounds) {
 	var latitude = location['LAT'];
@@ -94,10 +98,6 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
       $scope.errorMessage = data;
     });  
   };
-
-
-
-
 
 
 }]);
