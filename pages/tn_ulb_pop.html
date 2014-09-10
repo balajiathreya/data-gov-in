@@ -29,9 +29,9 @@
 		<h4>Click on any pin on the map to view population information</h4>
 		<div>Location name : {{pop_info['ULB_NAME']}}</div>
 		<div>Type of location : {{pop_info['TYPE']}}</div>
-		<div>Population (based on house listing) : {{pop_info['POP_PROVISIONAL']}}</div>
-		<div>Population (based on 2001) : {{pop_info['POP_2001_CENSUS']}}</div>
-		<div>Area in sq km : {{pop_info['AREA_SQ_KM']}}</div>
+		<div>Population (based on house listing) : {{pop_info['POP_PROVISIONAL'].toLocaleString()}}</div>
+		<div>Population (based on 2001) : {{pop_info['POP_2001_CENSUS'].toLocaleString()}}</div>
+		<div>Area in sq km : {{pop_info['AREA_SQ_KM'].toLocaleString()}}</div>
 
         </div>
     </div>
