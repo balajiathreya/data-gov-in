@@ -26,7 +26,7 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
   $scope.lat = 10.9580; 
   $scope.lon = 78.0800;
   $scope.errorMessage = 'blah blah';
-  $scope.pop_info = '';
+  $scope.pop_info = {};
   $scope.selid = 0;
   $scope.map = {
     center: {        
@@ -41,7 +41,7 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
 
  $scope.markerModels = [];
  $scope.options = {};
-
+ $scope.infoWindowOptions = {content: '<div>blah blah</div>'};
   // Get the bounds from the map once it's loaded
   $scope.$watch(function() { return $scope.map.bounds; }, function() {	getPopData();   }, true);
 
@@ -51,15 +51,16 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
           if(model.$id){
              model = model.coords;//use scope portion then
             }
-	  updatePopInfo(model.id);
+	 updatePopInfo(model.id, gMarker);
        }
    };
 
 
-  var updatePopInfo = function(id){
-	 $scope.pop_info = $scope.popData[id];
-         console.log($scope.pop_info);
-	$scope.$apply();
+  var updatePopInfo = function(id, marker){
+	$scope.pop_info = $scope.popData[id];
+	$scope.infoWindowOptions = {content: '<div>blah blahadsfad</div>'};
+	marker.showWindow = true;
+ 	$scope.$apply();
   };
 
  var createMarker = function (i, location, bounds) {

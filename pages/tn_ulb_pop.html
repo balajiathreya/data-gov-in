@@ -1,10 +1,8 @@
-
-
+</div>
     <style type='text/css'>
         .angular-google-map-container { height: 900px; }
 	.labelMarker {height:140px;}
     </style>
-
 
     <a href='#'>Back to Home</a>
 
@@ -21,7 +19,11 @@
             options="map.options"
             pan="true"
             control="map.control">
-			  <markers models="markerModels" coords="'self'" click="'onClicked'" options="'options'" events="markerEvents" isLabel='true'></markers>
+			<markers models="markerModels" coords="'self'" click="'onClicked'" options="'options'" events="markerEvents" isLabel='true'>
+				<windows show='showWindow' options='infoWindowOptions' ng-cloak>
+
+				</windows>
+			</markers>
 		</google-map>
         </div>
 
