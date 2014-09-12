@@ -1,0 +1,249 @@
+{
+  "data": [
+    {
+      "villages_electrified_count": "26613",
+      "total_inhabited_villages": "26613",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Andhra Pradesh"
+    },
+    {
+      "villages_electrified_count": "2917",
+      "total_inhabited_villages": "3863",
+      "villages_unelectrified_count": "946",
+      "villages_electrified_percent": "75.5",
+      "state/union-territory": "Arunachal Pradesh"
+    },
+    {
+      "villages_electrified_count": "24156",
+      "total_inhabited_villages": "25124",
+      "villages_unelectrified_count": "968",
+      "villages_electrified_percent": "96.1",
+      "state/union-territory": "Assam"
+    },
+    {
+      "villages_electrified_count": "37002",
+      "total_inhabited_villages": "39015",
+      "villages_unelectrified_count": "2013",
+      "villages_electrified_percent": "94.8",
+      "state/union-territory": "Bihar "
+    },
+    {
+      "villages_electrified_count": "158",
+      "total_inhabited_villages": "158",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Delhi"
+    },
+    {
+      "villages_electrified_count": "26190",
+      "total_inhabited_villages": "29354",
+      "villages_unelectrified_count": "3164",
+      "villages_electrified_percent": "89.2",
+      "state/union-territory": "Jharkhand"
+    },
+    {
+      "villages_electrified_count": "347",
+      "total_inhabited_villages": "347",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Goa"
+    },
+    {
+      "villages_electrified_count": "18031",
+      "total_inhabited_villages": "18066",
+      "villages_unelectrified_count": "35",
+      "villages_electrified_percent": "99.8",
+      "state/union-territory": "Gujarat"
+    },
+    {
+      "villages_electrified_count": "6764",
+      "total_inhabited_villages": "6764",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Haryana"
+    },
+    {
+      "villages_electrified_count": "17480",
+      "total_inhabited_villages": "17495",
+      "villages_unelectrified_count": "15",
+      "villages_electrified_percent": "99.9",
+      "state/union-territory": "Himachal Pradesh"
+    },
+    {
+      "villages_electrified_count": "6304",
+      "total_inhabited_villages": "6417",
+      "villages_unelectrified_count": "113",
+      "villages_electrified_percent": "98.2",
+      "state/union-territory": "Jammu&Kashmir"
+    },
+    {
+      "villages_electrified_count": "27468",
+      "total_inhabited_villages": "27481",
+      "villages_unelectrified_count": "13",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Karnataka"
+    },
+    {
+      "villages_electrified_count": "1364",
+      "total_inhabited_villages": "1364",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Kerala"
+    },
+    {
+      "villages_electrified_count": "50970",
+      "total_inhabited_villages": "52117",
+      "villages_unelectrified_count": "1147",
+      "villages_electrified_percent": "97.8",
+      "state/union-territory": "Madhya Pradesh"
+    },
+    {
+      "villages_electrified_count": "19224",
+      "total_inhabited_villages": "19744",
+      "villages_unelectrified_count": "520",
+      "villages_electrified_percent": "97.4",
+      "state/union-territory": "Chattisgarh "
+    },
+    {
+      "villages_electrified_count": "41059",
+      "total_inhabited_villages": "41095",
+      "villages_unelectrified_count": "36",
+      "villages_electrified_percent": "99.9",
+      "state/union-territory": "Maharashtra"
+    },
+    {
+      "villages_electrified_count": "1997",
+      "total_inhabited_villages": "2315",
+      "villages_unelectrified_count": "318",
+      "villages_electrified_percent": "86.3",
+      "state/union-territory": "Manipur"
+    },
+    {
+      "villages_electrified_count": "4988",
+      "total_inhabited_villages": "5782",
+      "villages_unelectrified_count": "794",
+      "villages_electrified_percent": "86.3",
+      "state/union-territory": "Meghalaya"
+    },
+    {
+      "villages_electrified_count": "674",
+      "total_inhabited_villages": "707",
+      "villages_unelectrified_count": "33",
+      "villages_electrified_percent": "95.3",
+      "state/union-territory": "Mizoram"
+    },
+    {
+      "villages_electrified_count": "896",
+      "total_inhabited_villages": "1278",
+      "villages_unelectrified_count": "382",
+      "villages_electrified_percent": "70.1",
+      "state/union-territory": "Nagaland"
+    },
+    {
+      "villages_electrified_count": "38920",
+      "total_inhabited_villages": "47529",
+      "villages_unelectrified_count": "8609",
+      "villages_electrified_percent": "81.9",
+      "state/union-territory": "Orissa"
+    },
+    {
+      "villages_electrified_count": "12278",
+      "total_inhabited_villages": "12278",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Punjab"
+    },
+    {
+      "villages_electrified_count": "39027",
+      "total_inhabited_villages": "39753",
+      "villages_unelectrified_count": "726",
+      "villages_electrified_percent": "98.2",
+      "state/union-territory": "Rajasthan"
+    },
+    {
+      "villages_electrified_count": "450",
+      "total_inhabited_villages": "450",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Sikkim"
+    },
+    {
+      "villages_electrified_count": "15400",
+      "total_inhabited_villages": "15400",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Tamil Nadu"
+    },
+    {
+      "villages_electrified_count": "798",
+      "total_inhabited_villages": "858",
+      "villages_unelectrified_count": "60",
+      "villages_electrified_percent": "93.0",
+      "state/union-territory": "Tripura"
+    },
+    {
+      "villages_electrified_count": "96850",
+      "total_inhabited_villages": "97942",
+      "villages_unelectrified_count": "1092",
+      "villages_electrified_percent": "98.9",
+      "state/union-territory": "Uttar Pradesh"
+    },
+    {
+      "villages_electrified_count": "15593",
+      "total_inhabited_villages": "15761",
+      "villages_unelectrified_count": "168",
+      "villages_electrified_percent": "98.9",
+      "state/union-territory": "Uttaranchal  "
+    },
+    {
+      "villages_electrified_count": "37941",
+      "total_inhabited_villages": "37945",
+      "villages_unelectrified_count": "4",
+      "villages_electrified_percent": "99.99",
+      "state/union-territory": "West Bengal"
+    },
+    {
+      "villages_electrified_count": "339",
+      "total_inhabited_villages": "501",
+      "villages_unelectrified_count": "162",
+      "villages_electrified_percent": "67.7",
+      "state/union-territory": "A & N Island"
+    },
+    {
+      "villages_electrified_count": "23",
+      "total_inhabited_villages": "23",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Chandigarh"
+    },
+    {
+      "villages_electrified_count": "70",
+      "total_inhabited_villages": "70",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "D & N Haveli"
+    },
+    {
+      "villages_electrified_count": "23",
+      "total_inhabited_villages": "23",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Daman & Diu"
+    },
+    {
+      "villages_electrified_count": "8",
+      "total_inhabited_villages": "8",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Lakshadweep"
+    },
+    {
+      "villages_electrified_count": "92",
+      "total_inhabited_villages": "92",
+      "villages_unelectrified_count": "0",
+      "villages_electrified_percent": "100.0",
+      "state/union-territory": "Pondicherry"
+    }
+  ]
+}
