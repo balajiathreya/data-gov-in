@@ -41,7 +41,9 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
 
  $scope.markerModels = [];
  $scope.options = {};
- $scope.infoWindowOptions = {content: '<div>blah blah</div>'};
+
+
+
   // Get the bounds from the map once it's loaded
   $scope.$watch(function() { return $scope.map.bounds; }, function() {	getPopData();   }, true);
 
@@ -58,7 +60,13 @@ dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scop
 
   var updatePopInfo = function(id, marker){
 	$scope.pop_info = $scope.popData[id];
-	$scope.infoWindowOptions = {content: '<div>blah blahadsfad</div>'};
+	$scope.infoWindowOptions = {
+		coords : {
+			latitude : $scope.pop_info['LAT'], 
+			longitude : $scope.pop_info['LNG']
+			}, 
+		content : $scope.pop_info['ULB_NAME']
+	};		
 	marker.showWindow = true;
  	$scope.$apply();
   };
