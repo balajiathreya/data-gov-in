@@ -11,8 +11,61 @@ dataGovINApp.config(function($routeProvider) {
 		.when('/tn_ulb_pop', {
 			templateUrl : 'pages/tn_ulb_pop.html',
 			controller  : 'tnULBPopController'
-		});
+		})
+		.when('/internet_providers', {
+                        templateUrl : 'pages/internet_providers.html',
+                        controller  : 'internetProvidersController'
+                })
 	});
+
+
+
+dataGovINApp.controller('internetProvidersController', ['$scope','$http', function ($scope,$http) {
+ $scope.radialLabels = [];
+ $scope.segmentLabels = [];
+ $scope.subscriberPercent = [];
+
+ // Get the bounds from the map once it's loaded
+
+//var chart = circularHeatChart().innerRadius(20).radialLabels($scope.radialLabels).segmentLabels($scope.segmentLabels);
+//d3.select('#ichart').selectAll('svg').data([$scope.subscriberPercent])enter().append('svg').call(chart);
+
+ var getSubscribersData = function(){
+    url = "/resources/internet_providers.json";
+    var responsePromise = $http.get(url);
+
+    responsePromise.success(function(data, status, headers, config) {
+        subscribersData = data['data'];
+
+        for (var i = 0; i < subscribersData.length; i++){
+		var entry = subscribersData[i];
+		for(key in entry){
+			if(key.indexOf('%') != -1){
+	                        $scope.subscriberPercent.push(entry[key]);
+                	}
+		}
+		$scope.radialLabels.push(subscribersData[i]['ISP']);
+        }
+
+	for ( i in subscribersData[0] ){
+		if(i.indexOf('%') != -1){
+			$scope.segmentLabels.push(i);
+		}
+	}
+
+var chart = circularHeatChart().innerRadius(20).radialLabels($scope.radialLabels).segmentLabels($scope.segmentLabels);
+d3.select('#ichart').selectAll('svg').data([$scope.subscriberPercent])enter().append('svg').call(chart);
+
+    });
+
+    responsePromise.error(function(data, status, headers, config) {
+      $scope.errorMessage = data;
+    });
+  };
+
+  getSubscribersData();
+
+}]);
 
 // define controllers for each page
 dataGovINApp.controller('tnULBPopController', ['$scope','$http', function ($scope,$http) {
